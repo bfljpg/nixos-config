@@ -43,7 +43,7 @@
     keyMap = "trq";
   };
 
-
+  programs.steam.enable = true;
 
   users.users.emircnkr = {
     isNormalUser = true;
