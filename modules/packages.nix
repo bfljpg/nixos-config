@@ -17,5 +17,7 @@
     pavucontrol
     matcha-gtk-theme
     papirus-icon-theme
+    neofetch
+    vscodium
   ];
 }
