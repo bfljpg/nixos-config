@@ -43,7 +43,11 @@
     keyMap = "trq";
   };
 
-  programs.steam.enable = true;
+  programs = {
+    steam.enable = true;
+    kdeconnect.enable = true;
+  };
+  
 
   users.users.emircnkr = {
     isNormalUser = true;
