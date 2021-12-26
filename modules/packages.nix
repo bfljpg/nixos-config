@@ -1,6 +1,8 @@
 { pkgs, ... }:
 
 {
+  nixpkgs.config.allowUnfree = true;
+  
   environment.systemPackages = with pkgs; [
     chromium
     firefox
@@ -18,6 +20,10 @@
     matcha-gtk-theme
     papirus-icon-theme
     neofetch
-    vscodium
+    geekbench
+    gimp
+
+    (vscode-with-extensions.override { vscodeExtensions = with vscode-extensions; [ ms-vscode.cpptools ];
+    })
   ];
 }

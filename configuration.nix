@@ -62,6 +62,9 @@
     '';
    };
 
+  virtualisation.virtualbox.host.enable = true;
+  users.extraGroups.vboxusers.members = [ "user-with-access-to-virtualbox" ];
+
   services.udev.packages = [ pkgs.android-udev-rules ];
 
   system.stateVersion = "unstable";
