@@ -14,18 +14,25 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/fe44af73-1d9c-4451-a403-4906848bf523";
+    { device = "/dev/disk/by-uuid/fe3c0881-a219-4ddc-b4e1-510cdbd00f2f";
       fsType = "ext4";
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/E1D7-8809";
+    { device = "/dev/disk/by-uuid/4B47-A90F";
       fsType = "vfat";
     };
 
   swapDevices =
-    [ { device = "/dev/disk/by-uuid/94bbd4e1-1c68-4ee6-8065-745b281ef34d"; }
+    [ { device = "/dev/disk/by-uuid/f0a6ee11-19f1-4f7a-97c7-ea09dd0794cd"; }
     ];
+
+  # The global useDHCP flag is deprecated, therefore explicitly set to false here.
+  # Per-interface useDHCP will be mandatory in the future, so this generated config
+  # replicates the default behaviour.
+  networking.useDHCP = lib.mkDefault false;
+  networking.interfaces.enp1s0.useDHCP = lib.mkDefault true;
+  networking.interfaces.wlp2s0.useDHCP = lib.mkDefault true;
 
   powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
