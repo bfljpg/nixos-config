@@ -4,11 +4,12 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.systemd-boot.enable = true;
   
-  boot.kernelPackages = pkgs.linuxPackages_xanmod;
+  boot.kernelPackages = pkgs.linuxPackages_latest;
   
   hardware.cpu.intel.updateMicrocode = true;
   
   boot.kernelParams = [
+    "quiet"
     "nomce"
     "nowatchdog"
     "quiet"
