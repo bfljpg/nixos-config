@@ -14,25 +14,26 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/fe3c0881-a219-4ddc-b4e1-510cdbd00f2f";
+    { device = "/dev/disk/by-uuid/0bf8b8bf-ab97-41eb-a6c0-fdac1486af70";
       fsType = "ext4";
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/4B47-A90F";
+    { device = "/dev/disk/by-uuid/CE2B-ABF0";
       fsType = "vfat";
     };
 
   swapDevices =
-    [ { device = "/dev/disk/by-uuid/f0a6ee11-19f1-4f7a-97c7-ea09dd0794cd"; }
+    [ { device = "/dev/disk/by-uuid/d2e1c967-2c5c-4440-ab9b-2acb91e52c41"; }
     ];
 
-  # The global useDHCP flag is deprecated, therefore explicitly set to false here.
-  # Per-interface useDHCP will be mandatory in the future, so this generated config
-  # replicates the default behaviour.
-  networking.useDHCP = lib.mkDefault false;
-  networking.interfaces.enp1s0.useDHCP = lib.mkDefault true;
-  networking.interfaces.wlp2s0.useDHCP = lib.mkDefault true;
+  # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
+  # (the default) this is the recommended approach. When using systemd-networkd it's
+  # still possible to use this option, but it's recommended to use it in conjunction
+  # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
+  networking.useDHCP = lib.mkDefault true;
+  # networking.interfaces.enp1s0.useDHCP = lib.mkDefault true;
+  # networking.interfaces.wlp2s0.useDHCP = lib.mkDefault true;
 
   powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;

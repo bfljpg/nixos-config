@@ -1,7 +1,7 @@
 { pkgs, config, lib, ... }:
 
 {
-  # bluetooth
+  # Bluetooth
   hardware.bluetooth.enable = true;
   hardware.bluetooth.package = pkgs.bluezFull;
   
@@ -13,15 +13,15 @@
     libvdpau-va-gl
   ];
   
-  # printing
+  # Printing
   services.printing.enable = true;
   services.printing.drivers = [ pkgs.gutenprint ];
 
-  # touchpad and wacom
+  # Trackpad
   services.xserver.libinput.enable = true;
-  services.xserver.wacom.enable = true;
 
-  # pipewire
+  # Pipewire
+  hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;

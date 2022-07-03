@@ -26,15 +26,6 @@
     noto-fonts
   ];
 
-# Enable TearFree
-#  services.xserver.extraConfig = ''
-#    Section "Device"
-#      Identifier "Intel Graphics"
-#      Driver "intel"
-#      Option "TearFree" "true"
-#    EndSection
-#  '';
-
   services.xserver.layout = "tr";
   i18n.defaultLocale = "tr_TR.UTF-8";
   time.timeZone = "Europe/Istanbul";
@@ -47,12 +38,11 @@
     steam.enable = true;
     kdeconnect.enable = true;
   };
-  
 
   users.users.emircnkr = {
     isNormalUser = true;
     extraGroups = [ "networkmanager" "wheel" ];
-    initialPassword = "parola";
+    initialPassword = "13.12.1989";
   };
 
   nix = {
