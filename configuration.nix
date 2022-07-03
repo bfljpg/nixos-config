@@ -19,6 +19,10 @@
     "mitigations=off"
   ];
 
+  programs.bash.shellAliases = {
+    rebuild-from-github = "sudo nixos-rebuild switch --flake github:emircnkr196/nixos-config#es1-572";
+  };
+
   networking.networkmanager.enable = true;
 
   fonts.fonts = with pkgs; [
