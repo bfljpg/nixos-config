@@ -13,7 +13,7 @@
     "nomce"
     "nowatchdog"
     "quiet"
-    "loglevel=2"
+    "loglevel=3"
     "modules_blacklist=iTCO_wdt"
     "i915.fastboot=1"
     "mitigations=off"
@@ -57,7 +57,12 @@
     '';
    };
 
-  virtualisation.virtualbox.host.enable = true;
+  virtualisation = {
+    virtualbox.host.enable = true;
+    waydroid. enable = true;
+    lxd.enable = true;
+  };
+
   users.extraGroups.vboxusers.members = [ "user-with-access-to-virtualbox" ];
 
   services.udev.packages = [ pkgs.android-udev-rules ];
