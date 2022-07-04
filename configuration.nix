@@ -20,7 +20,8 @@
   ];
 
   programs.bash.shellAliases = {
-    rebuild-from-github = "sudo nixos-rebuild switch --flake github:emircnkr196/nixos-config#es1-572";
+    rebuild-online = "sudo nixos-rebuild switch --flake github:emircnkr196/nixos-config#es1-572";
+    rebuild-nixos = "sudo nixos-rebuild switch --flake /home/emircnkr/nixos-config#es1-572";
   };
 
   networking.networkmanager.enable = true;

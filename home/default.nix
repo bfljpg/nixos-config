@@ -13,5 +13,7 @@
     ghc
     usbutils
     pciutils
+    stress-ng
+    scrcpy
   ]; 
 }
