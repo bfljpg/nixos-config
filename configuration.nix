@@ -62,5 +62,5 @@
 
   services.udev.packages = [ pkgs.android-udev-rules ];
 
-  system.stateVersion = "unstable";
+  system.stateVersion = "22.05";
 }
