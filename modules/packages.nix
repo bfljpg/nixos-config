@@ -30,5 +30,7 @@
     neofetch
 
     geekbench
+
+    wineWowPackages.waylandFull
   ];
 }
