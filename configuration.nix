@@ -6,22 +6,13 @@
   
   boot.kernelPackages = pkgs.linuxPackages_xanmod;
   
-  hardware.cpu.intel.updateMicrocode = true;
-  
   boot.kernelParams = [
     "quiet"
     "nomce"
     "nowatchdog"
-    "quiet"
     "loglevel=3"
-    "modules_blacklist=iTCO_wdt"
-    "i915.fastboot=1"
     "mitigations=off"
   ];
-
-  programs.bash.shellAliases = {
-    rebuild-nixos = "sudo nixos-rebuild switch --flake github:emircnkr196/nixos-config#es1-572";
-  };
 
   networking.networkmanager.enable = true;
 
@@ -63,7 +54,7 @@
 
   users.extraGroups.vboxusers.members = [ "user-with-access-to-virtualbox" ];
 
-  home-manager.users.emircnkr.home.stateVersion = "22.11";
+  home-manager.users.emircnkr.home.stateVersion = "23.05";
 
   services.udev.packages = [ pkgs.android-udev-rules ];
 

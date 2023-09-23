@@ -5,17 +5,13 @@
   hardware.bluetooth.enable = true;
   hardware.bluetooth.package = pkgs.bluezFull;
   
-  hardware.opengl.enable = true;
-  hardware.opengl.extraPackages = with pkgs; [
-    intel-media-driver
-    vaapiIntel
-    vaapiVdpau
-    libvdpau-va-gl
-  ];
+  hardware.opengl.driSupport = true;
+  hardware.opengl.driSupport32Bit = true;
   
-  # Printing
-  services.printing.enable = true;
-  services.printing.drivers = [ pkgs.gutenprint ];
+  hardware.opengl.extraPackages = with pkgs; [
+  rocm-opencl-icd
+  rocm-opencl-runtime
+  ];
 
   # Trackpad
   services.xserver.libinput.enable = true;

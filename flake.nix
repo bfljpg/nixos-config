@@ -32,7 +32,7 @@
     in
 
     {
-      nixosConfigurations.es1-572 = mkComputer
+      nixosConfigurations.hp-245-g9 = mkComputer
         ./configuration.nix
         [
           ./modules/desktop.nix

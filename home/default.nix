@@ -2,9 +2,6 @@
 
 {
   home.packages = with pkgs; [
-    go
-    rustc
-    cargo
     android-tools
     bootiso
     gdb
@@ -13,7 +10,6 @@
     ghc
     usbutils
     pciutils
-    stress-ng
     scrcpy
   ]; 
 }
