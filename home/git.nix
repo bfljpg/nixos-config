@@ -8,5 +8,4 @@
   };
 
   programs.gh.enable = true;
-  programs.gh.enableGitCredentialHelper = true;
 }

@@ -16,12 +16,6 @@
 
   networking.networkmanager.enable = true;
 
-  fonts.fonts = with pkgs; [
-    open-sans
-    source-code-pro
-    noto-fonts
-  ];
-
   services.xserver.layout = "tr";
   i18n.defaultLocale = "tr_TR.UTF-8";
   time.timeZone = "Europe/Istanbul";

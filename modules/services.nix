@@ -3,7 +3,7 @@
 {
   # Bluetooth
   hardware.bluetooth.enable = true;
-  hardware.bluetooth.package = pkgs.bluezFull;
+  hardware.bluetooth.package = pkgs.bluez;
   
   hardware.opengl.driSupport = true;
   hardware.opengl.driSupport32Bit = true;
