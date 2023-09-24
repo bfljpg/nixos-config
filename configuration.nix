@@ -4,7 +4,6 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.systemd-boot.enable = true;
   boot.plymouth.enable = true;
-  boot.plymouth.theme="breeze";
 
   boot.kernelPackages = pkgs.linuxPackages_zen;
   
