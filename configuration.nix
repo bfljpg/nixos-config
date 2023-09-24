@@ -31,7 +31,7 @@
 
   users.users.emircnkr = {
     isNormalUser = true;
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "vboxusers" ];
     initialPassword = "13.12.1989";
   };
 
