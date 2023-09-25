@@ -11,5 +11,6 @@
     usbutils
     pciutils
     scrcpy
+    lm_sensors
   ]; 
 }
