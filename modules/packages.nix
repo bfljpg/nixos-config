@@ -20,6 +20,7 @@
     papirus-icon-theme
     gnome.gnome-tweaks
     neofetch
+    kdiskmark
     geekbench
     wineWowPackages.waylandFull
   ];
