@@ -23,5 +23,6 @@
     kdiskmark
     geekbench
     wineWowPackages.waylandFull
+    anydesk
   ];
 }
