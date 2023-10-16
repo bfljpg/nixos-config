@@ -12,6 +12,7 @@
     pciutils
     scrcpy
     lm_sensors
+    rar
     efibootmgr
   ]; 
 }
