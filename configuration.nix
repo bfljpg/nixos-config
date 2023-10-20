@@ -23,7 +23,7 @@
           insmod fat
           insmod search_fs_uuid
           insmod chain
-          search --fs-uuid --set=root C448-EACB
+          search --fs-uuid --set=root 6ABF-E76E
           chainloader /EFI/Microsoft/Boot/bootmgfw.efi
         }
       '';
