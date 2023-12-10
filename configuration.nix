@@ -78,7 +78,7 @@
 
   users.extraGroups.vboxusers.members = [ "user-with-access-to-virtualbox" ];
 
-  home-manager.users.emircnkr.home.stateVersion = "23.05";
+  home-manager.users.emircnkr.home.stateVersion = "24.05";
 
   services.udev.packages = [ pkgs.android-udev-rules ];
 
