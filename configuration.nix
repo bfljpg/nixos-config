@@ -52,16 +52,12 @@
   };
 
   programs = {
-    steam.enable = true;
     kdeconnect.enable = true;
-    dconf.enable = true;
   };
-
-  virtualisation.libvirtd.enable = true;
   
   users.users.emircnkr = {
     isNormalUser = true;
-    extraGroups = [ "networkmanager" "wheel" "vboxusers" "libvirtd" ];
+    extraGroups = [ "networkmanager" "wheel" ];
     initialPassword = "13.12.1989";
   };
 
@@ -71,13 +67,7 @@
       experimental-features = nix-command flakes
     '';
    };
-
-  virtualisation = {
-    virtualbox.host.enable = true;
-  };
-
-  users.extraGroups.vboxusers.members = [ "user-with-access-to-virtualbox" ];
-
+   
   home-manager.users.emircnkr.home.stateVersion = "24.05";
 
   services.udev.packages = [ pkgs.android-udev-rules ];

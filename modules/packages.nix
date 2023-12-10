@@ -7,9 +7,7 @@
     chromium
     firefox
     tdesktop
-    libreoffice-fresh
     evince
-    system-config-printer
     wget
     curl
     openboard
@@ -23,6 +21,5 @@
     kdiskmark
     geekbench
     wineWowPackages.waylandFull
-    virt-manager
   ];
 }
