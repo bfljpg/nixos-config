@@ -17,16 +17,16 @@
       efiSupport = true;
       enable = true;
       # set $FS_UUID to the UUID of the EFI partition
-      # extraEntries = ''
-      #   menuentry "Windows" {
-      #     insmod part_gpt
-      #     insmod fat
-      #     insmod search_fs_uuid
-      #     insmod chain
-      #     search --fs-uuid --set=root 6ABF-E76E
-      #     chainloader /EFI/Microsoft/Boot/bootmgfw.efi
-      #   }
-      # '';
+      extraEntries = ''
+        menuentry "Windows" {
+          insmod part_gpt
+          insmod fat
+          insmod search_fs_uuid
+          insmod chain
+          search --fs-uuid --set=root 200C-4F19
+          chainloader /EFI/Microsoft/Boot/bootmgfw.efi
+        }
+      '';
     };
   };
   boot.plymouth.enable = true;
