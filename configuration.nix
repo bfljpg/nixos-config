@@ -54,8 +54,11 @@
   programs = {
     steam.enable = true;
     kdeconnect.enable = true;
+    dconf.enable = true;
   };
 
+  virtualisation.libvirtd.enable = true;
+  
   users.users.emircnkr = {
     isNormalUser = true;
     extraGroups = [ "networkmanager" "wheel" "vboxusers" ];
