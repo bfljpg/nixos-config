@@ -39,6 +39,7 @@
     "nowatchdog"
     "loglevel=3"
     "mitigations=off"
+    "amd_pstate=disable"
   ];
 
   networking.networkmanager.enable = true;
