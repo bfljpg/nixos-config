@@ -16,6 +16,7 @@
       devices = [ "nodev" ];
       efiSupport = true;
       enable = true;
+      /*
       # set $FS_UUID to the UUID of the EFI partition
       extraEntries = ''
         menuentry "Windows" {
@@ -23,10 +24,11 @@
           insmod fat
           insmod search_fs_uuid
           insmod chain
-          search --fs-uuid --set=root 200C-4F19
+          search --fs-uuid --set=root 0C0E-90BF
           chainloader /EFI/Microsoft/Boot/bootmgfw.efi
         }
       '';
+      */
     };
   };
   boot.plymouth.enable = true;
