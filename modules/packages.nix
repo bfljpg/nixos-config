@@ -21,5 +21,6 @@
     kdiskmark
     geekbench
     wineWowPackages.waylandFull
+    virt-manager
   ];
 }

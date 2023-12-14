@@ -54,6 +54,8 @@
     keyMap = "trq";
   };
 
+  virtualisation.libvirtd.enable = true;
+  
   programs = {
     kdeconnect.enable = true;
     dconf.enable = true;
@@ -61,7 +63,7 @@
   
   users.users.emircnkr = {
     isNormalUser = true;
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
     initialPassword = "13.12.1989";
   };
 
