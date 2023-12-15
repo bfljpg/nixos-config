@@ -41,19 +41,22 @@
     "nowatchdog"
     "loglevel=3"
     "mitigations=off"
-    "amd_pstate=disable"
+  #  "amd_pstate=disable"
   ];
 
+  # I'll set it as comment if I want to switch cpufreq from amd_pstate and noboost service again.
+  /*
   systemd.services.noturbo = {
     wantedBy = [ "multi-user.target" ];
     path = [ pkgs.coreutils ];
-    enable = true;
+    enable = false;
     serviceConfig = {
       User = "root";
       Group = "root";
     };
     script = ''echo "0" | tee /sys/devices/system/cpu/cpufreq/boost'';
   };
+  */
 
   networking.networkmanager.enable = true;
 
