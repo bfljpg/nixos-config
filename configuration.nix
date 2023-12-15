@@ -44,6 +44,17 @@
     "amd_pstate=disable"
   ];
 
+  systemd.services.noturbo = {
+    wantedBy = [ "multi-user.target" ];
+    path = [ pkgs.coreutils ];
+    enable = true;
+    serviceConfig = {
+      User = "root";
+      Group = "root";
+    };
+    script = ''echo "0" | tee /sys/devices/system/cpu/cpufreq/boost'';
+  };
+
   networking.networkmanager.enable = true;
 
   services.xserver.layout = "tr";
