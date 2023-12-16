@@ -16,7 +16,7 @@
     easyeffects
     matcha-gtk-theme
     papirus-icon-theme
-    gnome.gnome-tweaks
+    # gnome.gnome-tweaks
     neofetch
     kdiskmark
     geekbench
